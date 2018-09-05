@@ -4,6 +4,10 @@ set -e
 
 python updater.py "$API_KEY"
 
+mkdir build
+cp data.json build
+cd build
+
 reponame="forex-backend"
 branchname="json-data"
 
