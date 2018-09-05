@@ -1,0 +1,16 @@
+version: '{build}'
+branches:
+  only:
+  - master
+clone_depth: 1
+environment:
+  API_KEY:
+    secure: M+Leah5UmuPL7EuzgxJX1Oz5sVlQPRPW5eWcpY1ZzGZMF8GwW3RZFQ5vnhf4IsV3
+  GH_TOKEN:
+    secure: piYpPgltlbrF57pmU6S9/gAU3c3gk9WefQwasrYLUF8vRKg9PovDVIgtFqmhEYcM
+build_script:
+- cmd: >-
+    set PATH=C:\Program Files\Git\usr\bin;C:\Python36;C:\Python36\Scripts;%PATH%
+
+    bash appveyor_build.sh
+test: off
